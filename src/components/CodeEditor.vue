@@ -2,6 +2,7 @@
     <div>
         <div class="row">
             <div id="instructions" class="col-3 pr-0 text-white pt-4">
+                
                 <div class="container">
                     <LessonComponent />
                 </div>
@@ -75,8 +76,8 @@ export default {
     data() {
         return {
 
-            html : `<div id="root">\n\t<h1>Welcome to Vue</h1>\n</div>`,
-            javascript : `new Vue({\n\tel: "#root",\n\tdata: {\n\t\tmessage: "Vue is working"\n\t}\n})`,
+            html : `<div id="app">\n\t<h1>Welcome to Vue</h1>\n</div>`,
+            javascript : `new Vue({\n\tel: "#app",\n\tdata: {\n\t\tmessage: "Hello Vue!"\n\t}\n})`,
            
             cmOptions: [
                 {

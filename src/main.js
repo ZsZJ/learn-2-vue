@@ -5,6 +5,7 @@ import VueCodeMirror from 'vue-codemirror'
 
 // require styles
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/css/style.css'
 import 'codemirror/lib/codemirror.css'
 
 // Use code mirror
