@@ -20,7 +20,7 @@
                 </button>
                 <button v-if="courseLevel < courseCount" @click="courseLevel += 1" class="btn btn-large btn-default">
                     Volgende Stap
-                </button>
+                </button> 
             </div>
 
         </div>
