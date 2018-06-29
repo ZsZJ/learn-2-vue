@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- As a heading -->
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Learn to Vue</span>
+      <span class="right text-white">by Joey Lim</span>
+    </nav>
+    <CodeEditor />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import CodeEditor from './components/CodeEditor.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    CodeEditor,
   }
 }
 </script>
@@ -21,8 +26,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
