@@ -1,5 +1,6 @@
 <template>
-    <div class="row">
+    <div>
+
         <div class="col-12" id="lesson">
 
             <div class="row">
@@ -30,6 +31,9 @@
             </div>
         </div>
     </div>
+
+
+
 </template>
 
 <style scoped>
@@ -70,7 +74,6 @@ export default {
                     title : "Declaratieve weergave", 
                     stories : [
                         {
-                            title : "",
                             text : `De kern van Vue.js is een systeem dat ons in staat stelt 
                             declaratief gegevens naar de DOM weer te geven met 
                             behulp van eenvoudige template syntax:`,
@@ -81,16 +84,59 @@ export default {
                                 {
                                     path : require(`../assets/course-2/code-2.png`)
                                 }
-                            ]
+                            ],
                         },
                         {
-                            title : "",
                             text : `We hebben onze eerste Vue-app al gemaakt! Dit lijkt erg op het renderen van een string template, 
                             maar Vue heeft veel werk onder de motorkap gedaan.
                             De gegevens en de DOM zijn nu gekoppeld en alles is nu reactief.`
                         }
                     ],
-                } 
+                },
+                {
+                    title : "V-bind", 
+                    stories : [
+                        {
+                            text : `Naast tekstinterpolatie kunnen we ook elementattributen binden zoals deze:`,
+                            images : [
+                                {
+                                    path : require(`../assets/course-3/code-1.png`)
+                                },
+                                {
+                                    path : require(`../assets/course-3/code-2.png`)
+                                }
+                            ],
+                        },
+                        {
+                            text : `Hier komen we iets nieuws tegen. 
+                            Het v-bind attribuut dat u ziet, wordt een 'directive' genoemd. 
+                            'Directives' worden voorafgegaan door v- om aan te geven dat dit 
+                            speciale attributen zijn die door Vue worden geleverd en die, 
+                            zoals u misschien al geraden heeft, speciaal reactief gedrag toepassen op de gerenderde DOM. 
+                            Hier wordt in feite gezegd: "Houd het title attribuut van dit element up-to-date met de 
+                            property 'message' op de Vue-instantie.`
+                        }
+                    ],
+                },
+                {
+                    title : "Voorwaarden & Loops", 
+                    stories : [
+                        {
+                            text : `Het is ook eenvoudig om de aanwezigheid van een element in te stellen:`,
+                            images : [
+                                {
+                                    path : require(`../assets/course-4/code-1.png`)
+                                },
+                                {
+                                    path : require(`../assets/course-4/code-2.png`)
+                                }
+                            ],
+                        },
+                        {
+                            text : `Ga je gang en voer seen = false in. Je zou het bericht moeten zien verdwijnen.`
+                        }
+                    ],
+                }
             ]
         }
     },
@@ -100,7 +146,7 @@ export default {
         }
     },
     watch : {
-        courseLevel : function(newVal, oldVal) {
+        courseLevel : function() {
 
         }
     }

@@ -114,7 +114,6 @@ export default {
             // console.log('the html editor is readied!', cm)            
         },
         onCmFocusHtml(cm) {
-            
             // console.log('the html editor is focus!', cm)
         },
         onCmCodeChangeHtml(newCode) {
@@ -128,15 +127,11 @@ export default {
         },
 
         onCmFocusJavaScript(cm) {
-
             // console.log('the javascript editor is focus!', cm)
-        
         },
 
         onCmCodeChangeJavaScript(newCode) {
-
-            this.javascript = newCode
-            
+            this.javascript = newCode  
         },
     },
     computed: {

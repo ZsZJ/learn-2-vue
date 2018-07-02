@@ -28,11 +28,14 @@ export default {
     },
     mounted() {
 
-        // Set the previewframe
-        this.previewFrame = document.getElementById("preview")
-        
-        // Set the preview document
-        this.preview = this.previewFrame.contentDocument
+        // Set the preview component
+        this.setPreview()
+
+        // Set stylesheet
+        this.setStylesheet()
+
+        // Set VueInstance
+        this.setScript()
 
         // Add HTML-DIV for the html code in preview
         let htmlContainer = document.createElement('div')
@@ -44,16 +47,17 @@ export default {
         javascriptContainer.setAttribute("id", "javascriptcontainer")
         this.preview.body.append(javascriptContainer)
 
-        // Set stylesheet
-        this.setStylesheet()
-
-        // Set VueInstance
-        this.setScript()
-
         // Update the preview for the first time
         this.updatePreview()
     },
     methods : {
+
+        setPreview() {
+            // Set the previewframe
+            this.previewFrame = document.getElementById("preview")
+            // Set the preview document
+            this.preview = this.previewFrame.contentDocument
+        },
 
         // Set the stylesheet in the preview
         setStylesheet() {
@@ -89,14 +93,13 @@ export default {
             let script = document.createElement("script")
             script.innerHTML = this.javascript
             javascriptcontainer.append(script)
-            // this.preview.write(this.code.html)   
         }
     },
     watch : {
-        html : function(newVal, oldVal) {
+        html : function() {
             this.updatePreview()
         },
-        javascript : function(newVal, oldVal) {
+        javascript : function() {
             this.updatePreview()
         }
     },
